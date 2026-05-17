@@ -94,9 +94,9 @@ See [`docs/algorithms.md`](docs/algorithms.md) for key sizes and security level 
 
 | Platform | Architecture | CPU | RAM | OS |
 |---|---|---|---|---|
-| `ryzen` | x86_64 | AMD Ryzen 5 | 16 GB | Ubuntu 24.04 |
+| `ryzen` | x86_64 | AMD Ryzen 7 | 32 GB | Ubuntu 24.04 |
 | `celeron` | x86_64 | Intel Celeron N4020 | 4 GB | Ubuntu 22.04 |
-| `raspberry` | ARM64 | Raspberry Pi 5 (BCM2712) | 8 GB | Raspberry Pi OS (Debian 12) |
+| `raspberry` | ARM64 | Raspberry Pi 3 (BCM2712) | 2 GB | Raspberry Pi OS (Debian 12) |
 
 See [`docs/hardware-setups.md`](docs/hardware-setups.md) for full hardware and software details.
 
