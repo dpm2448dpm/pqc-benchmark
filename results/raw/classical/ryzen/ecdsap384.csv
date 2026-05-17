@@ -1,0 +1,11 @@
+algo,repeat,op,ops_per_sec,bytes,notes
+ecdsap384,1,sign,5567.1,NA,openssl_speed
+ecdsap384,1,verify,2441.4,NA,openssl_speed
+ecdsap384,2,sign,5560.6,NA,openssl_speed
+ecdsap384,2,verify,2440.4,NA,openssl_speed
+ecdsap384,3,sign,5563.3,NA,openssl_speed
+ecdsap384,3,verify,2439.4,NA,openssl_speed
+ecdsap384,4,sign,5543.0,NA,openssl_speed
+ecdsap384,4,verify,2439.2,NA,openssl_speed
+ecdsap384,5,sign,5562.3,NA,openssl_speed
+ecdsap384,5,verify,2439.0,NA,openssl_speed

@@ -1,0 +1,7 @@
+algo,repeat,op,ops_per_sec,bytes,notes
+ML-DSA-87,1,sign,9431.267,pk=4627|sk=4627|sig=4627,speed_table
+ML-DSA-87,1,verify,17775.267,pk=4627|sk=4627|sig=4627,speed_table
+ML-DSA-87,2,sign,9437.067,pk=4627|sk=4627|sig=4627,speed_table
+ML-DSA-87,2,verify,17779.000,pk=4627|sk=4627|sig=4627,speed_table
+ML-DSA-87,3,sign,9436.733,pk=4627|sk=4627|sig=4627,speed_table
+ML-DSA-87,3,verify,17763.667,pk=4627|sk=4627|sig=4627,speed_table

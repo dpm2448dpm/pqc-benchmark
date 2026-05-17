@@ -1,0 +1,7 @@
+algo,repeat,op,ops_per_sec,bytes,notes
+ML-KEM-768,1,encaps,92122.200,pk=1184|sk=32|ct=32,speed_table
+ML-KEM-768,1,decaps,76125.267,pk=1184|sk=32|ct=32,speed_table
+ML-KEM-768,2,encaps,92014.333,pk=1184|sk=32|ct=32,speed_table
+ML-KEM-768,2,decaps,76185.267,pk=1184|sk=32|ct=32,speed_table
+ML-KEM-768,3,encaps,92181.933,pk=1184|sk=32|ct=32,speed_table
+ML-KEM-768,3,decaps,76291.533,pk=1184|sk=32|ct=32,speed_table

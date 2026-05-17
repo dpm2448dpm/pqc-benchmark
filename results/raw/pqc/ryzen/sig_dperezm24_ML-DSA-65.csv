@@ -1,0 +1,7 @@
+algo,repeat,op,ops_per_sec,bytes,notes
+ML-DSA-65,1,sign,11774.333,pk=3309|sk=3309|sig=3309,speed_table
+ML-DSA-65,1,verify,28595.067,pk=3309|sk=3309|sig=3309,speed_table
+ML-DSA-65,2,sign,11771.667,pk=3309|sk=3309|sig=3309,speed_table
+ML-DSA-65,2,verify,28630.667,pk=3309|sk=3309|sig=3309,speed_table
+ML-DSA-65,3,sign,11800.533,pk=3309|sk=3309|sig=3309,speed_table
+ML-DSA-65,3,verify,28584.000,pk=3309|sk=3309|sig=3309,speed_table

@@ -1,0 +1,3 @@
+algo,repeat,op,ops_per_sec,bytes,notes
+rsa1024,1,sign,Doing,NA,openssl_speed
+rsa1024,1,verify,Doing,NA,openssl_speed

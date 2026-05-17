@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# Large raw result runs (keep representative subset in git; full data → Zenodo)
+results/raw/large_runs/
+
+# Regenerated figures (committed versions are the canonical ones)
+results/figures/pqc_*/
+results/figures/classical_*/
+results/figures/tls/
+results/figures/comparison/
