@@ -2,7 +2,7 @@
 
 Reproducible performance benchmarking framework for NIST-standardized post-quantum cryptographic algorithms across heterogeneous hardware environments.
 
-Compares **ML-KEM** and **ML-DSA** (FIPS 203/204, finalized August 2024) against their classical counterparts — RSA, ECDSA, and EdDSA — on three CPU architectures, measuring throughput, latency, key/signature sizes, and TLS handshake overhead.
+Compares **ML-KEM**, **ML-DSA** (FIPS 203/204, finalized August 2024), and **FrodoKEM** against their classical counterparts — RSA, ECDSA, and EdDSA — on three CPU architectures, measuring throughput, latency, key/signature sizes, and TLS handshake overhead.
 
 This repository accompanies the MSc thesis *"Performance Benchmarking of Post-Quantum Cryptographic Algorithms across Heterogeneous Hardware Environments"* (Universitat Oberta de Catalunya, 2026). [Read the full thesis](https://hdl.handle.net/10609/154216) · [PDF](docs/thesis.pdf)
 
@@ -78,11 +78,11 @@ Full methodology in [`docs/methodology.md`](docs/methodology.md).
 
 ## Algorithms covered
 
-| Family | Post-quantum (NIST standard) | Classical baseline |
+| Family | Post-quantum | Classical baseline |
 |---|---|---|
-| KEM | ML-KEM-512/768/1024 (FIPS 203) | ECDH P-256/384/521, X25519 |
+| KEM (standalone) | ML-KEM-512/768/1024 (FIPS 203) | ECDH P-256/384/521, X25519 |
 | Signatures | ML-DSA-44/65/87 (FIPS 204) | ECDSA P-256/384/521, Ed25519/Ed448, RSA-2048/3072/4096 |
-| TLS | ML-KEM hybrids, BIKE L1/L3/L5 | FFDHE, ECDH, X25519 |
+| TLS handshake | ML-KEM hybrids, FrodoKEM-640/976/1344, BIKE L1/L3/L5 | FFDHE, ECDH, X25519 |
 
 Implementations via [OpenSSL 3.x](https://openssl.org) with the [OQS Provider](https://github.com/open-quantum-safe/oqs-provider) and [liboqs](https://github.com/open-quantum-safe/liboqs).
 

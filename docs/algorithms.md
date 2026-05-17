@@ -1,8 +1,8 @@
 # Algorithms Covered
 
-## Post-Quantum Algorithms (NIST Standards)
+## Post-Quantum Algorithms
 
-### ML-KEM — Module-Lattice Key Encapsulation Mechanism (FIPS 203)
+### ML-KEM — Module-Lattice Key Encapsulation Mechanism (FIPS 203, NIST standard)
 
 Standardized by NIST in August 2024. Based on the CRYSTALS-Kyber submission; uses Module Learning With Errors (MLWE) hardness assumption.
 
@@ -14,7 +14,7 @@ Standardized by NIST in August 2024. Based on the CRYSTALS-Kyber submission; use
 
 Operations benchmarked: `keygen`, `encaps`, `decaps`.
 
-### ML-DSA — Module-Lattice Digital Signature Algorithm (FIPS 204)
+### ML-DSA — Module-Lattice Digital Signature Algorithm (FIPS 204, NIST standard)
 
 Standardized by NIST in August 2024. Based on CRYSTALS-Dilithium; uses MLWE and Module Short Integer Solution (MSIS).
 
@@ -25,6 +25,23 @@ Standardized by NIST in August 2024. Based on CRYSTALS-Dilithium; uses MLWE and 
 | ML-DSA-87 | 5 (≈AES-256) | 2,592 B | 4,864 B | 4,627 B |
 
 Operations benchmarked: `keygen`, `sign`, `verify`.
+
+### FrodoKEM — Learning With Errors KEM (NIST Round 3 alternate candidate)
+
+Not selected for NIST standardization but widely studied for its **conservative security assumptions**: unlike ML-KEM (which uses a ring/module lattice), FrodoKEM uses a plain unstructured LWE lattice, making it resistant to potential future attacks on ring structures. Included in the TLS suite as a comparison point.
+
+| Variant | NIST Level | Public Key | Secret Key | Ciphertext | PRG |
+|---|---|---|---|---|---|
+| FrodoKEM-640-AES | 1 (≈AES-128) | 9,616 B | 19,888 B | 9,720 B | AES |
+| FrodoKEM-640-SHAKE | 1 (≈AES-128) | 9,616 B | 19,888 B | 9,720 B | SHAKE-128 |
+| FrodoKEM-976-AES | 3 (≈AES-192) | 15,632 B | 31,296 B | 15,744 B | AES |
+| FrodoKEM-976-SHAKE | 3 (≈AES-192) | 15,632 B | 31,296 B | 15,744 B | SHAKE-256 |
+| FrodoKEM-1344-AES | 5 (≈AES-256) | 21,520 B | 43,088 B | 21,632 B | AES |
+| FrodoKEM-1344-SHAKE | 5 (≈AES-256) | 21,520 B | 43,088 B | 21,632 B | SHAKE-256 |
+
+Operations benchmarked: TLS handshake (pure PQC and hybrid with classical ECDH/X25519).
+
+Notable trade-off: FrodoKEM public keys are **8–14× larger** than ML-KEM equivalents at the same security level, resulting in measurably higher TLS handshake latency.
 
 ---
 
